@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SAP_ReverseEntry" this:SAP_ReverseEntry.in_DocumentNumber="75855" this:SAP_ReverseEntry.in_CompanyCode="1201" this:SAP_ReverseEntry.in_FiscalYear="2020" this:SAP_ReverseEntry.in_ReversalReason="01" this:SAP_ReverseEntry.in_PostingDate="07/03/2020" this:SAP_ReverseEntry.in_PostingPeriod="07" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:as="clr-namespace:ATG_Helpers.SAP;assembly=ATG-Helpers" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SAP_ReverseEntry" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:as="clr-namespace:ATG_Helpers.SAP;assembly=ATG-Helpers" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_DocumentNumber" Type="InArgument(x:String)" />
     <x:Property Name="in_CompanyCode" Type="InArgument(x:String)" />
@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>574,2479</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>574,1980</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SAP_ReverseEntry_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,10 +58,9 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Navigate SAP screens to reverse rejected journal entry&#xA;Pre-condition: SAP Easy Access&#xA;Post-condition: Reverse Document screen&#xA;Arguments:&#xD;&#xA;    out_PostStatus" DisplayName="SAP_ReverseEntry" sap:VirtualizedContainerService.HintSize="554,2299" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Navigate SAP screens to reverse rejected journal entry&#xA;Pre-condition: SAP Easy Access&#xA;Post-condition: Reverse Document screen&#xA;Arguments:&#xA;    out_PostStatus" DisplayName="SAP_ReverseEntry" sap:VirtualizedContainerService.HintSize="554,1920" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -69,9 +68,9 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Reversing rejected JE&quot;]" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,430" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,352" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="476,352" sap2010:WorkflowViewState.IdRef="Sequence_5">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -96,6 +95,12 @@
           </ui:WindowScope>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
     <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach to SAP Reverse Screen" sap:VirtualizedContainerService.HintSize="512,1388" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="9595230e58471d0a1f1dc58592d00727" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Reverse Document: Header Data' /&gt;">
       <ui:WindowScope.Body>
