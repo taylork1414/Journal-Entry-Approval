@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SAP_RemoveReversalDate" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:as="clr-namespace:ATG_Helpers.SAP;assembly=ATG-Helpers" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SAP_RemoveReversalDate" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_PostingDate" Type="OutArgument(x:String)" />
     <x:Property Name="out_PostingPeriod" Type="OutArgument(x:String)" />
@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1272,3300</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1314,3250</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SAP_RemoveReversalDate_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -56,23 +56,23 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Navigate SAP screens to remove reversal date (if exists) on previously-submitted entry&#xA;Pre-condition: SAP Homepage&#xA;Post-condition: Change Document overview screen&#xA;Arguments:&#xA;   out_PostingDate&#xA;   out_PostingPeriod&#xA;   out_PostingDate&#xA;   out_PostingPeriod" DisplayName="SAP_RemoveReversalDate" sap:VirtualizedContainerService.HintSize="1252,3160" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Navigate SAP screens to remove reversal date (if exists) on previously-submitted entry&#xA;Pre-condition: SAP Homepage&#xA;Post-condition: Change Document overview screen&#xA;Arguments:&#xA;   out_PostingDate&#xA;   out_PostingPeriod" DisplayName="SAP_RemoveReversalDate" sap:VirtualizedContainerService.HintSize="1294,3190" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1210,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Navigating to change doc screen to remove reversal date&quot;]" />
-    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach to SAP Document Screen" sap:VirtualizedContainerService.HintSize="1210,2674" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="2ff438e13c6d62da53b712929763c844" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Document Overview - Change' /&gt;">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Navigating to change doc screen to remove reversal date&quot;]" />
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach to SAP Document Screen" sap:VirtualizedContainerService.HintSize="1252,2734" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="2ff438e13c6d62da53b712929763c844" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Document Overview - Change' /&gt;">
       <ui:WindowScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1176,2528" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1218,2588" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
-              <Variable x:TypeArguments="ui:GenericValue" Name="reversalDate" />
+              <Variable x:TypeArguments="x:String" Name="reversalDate" />
               <Variable x:TypeArguments="x:Boolean" Name="reversalPopup" />
               <Variable x:TypeArguments="x:Boolean" Name="reversalDateField" />
             </Sequence.Variables>
@@ -81,7 +81,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click top hat icon for post values" sap:VirtualizedContainerService.HintSize="1134,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click top hat icon for post values" sap:VirtualizedContainerService.HintSize="1176,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -103,7 +103,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click check button" sap:VirtualizedContainerService.HintSize="1134,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click check button" sap:VirtualizedContainerService.HintSize="1176,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -125,7 +125,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get posting date" sap:VirtualizedContainerService.HintSize="1134,106" sap2010:WorkflowViewState.IdRef="GetFullText_1">
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get posting date" sap:VirtualizedContainerService.HintSize="1176,106" sap2010:WorkflowViewState.IdRef="GetFullText_1">
               <ui:GetFullText.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3ef232cb3cd047cb773d7ae2d6f0ae2e" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Change Document: Overview' /&gt;&lt;sap id='usr/ctxtBKPF-BUDAT' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -140,7 +140,7 @@
                 <OutArgument x:TypeArguments="x:String">[out_PostingDate]</OutArgument>
               </ui:GetFullText.Text>
             </ui:GetFullText>
-            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get posting period" sap:VirtualizedContainerService.HintSize="1134,106" sap2010:WorkflowViewState.IdRef="GetFullText_2">
+            <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get posting period" sap:VirtualizedContainerService.HintSize="1176,106" sap2010:WorkflowViewState.IdRef="GetFullText_2">
               <ui:GetFullText.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f7d3ca7b465112e1d23155d709fb7d07" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Change Document: Overview' /&gt;&lt;sap id='usr/txtBKPF-MONAT' /&gt;">
                   <ui:Target.TimeoutMS>
@@ -155,7 +155,7 @@
                 <OutArgument x:TypeArguments="x:String">[out_PostingPeriod]</OutArgument>
               </ui:GetFullText.Text>
             </ui:GetFullText>
-            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click hat icon" sap:VirtualizedContainerService.HintSize="1134,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click hat icon" sap:VirtualizedContainerService.HintSize="1176,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -177,7 +177,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:UiElementExists DisplayName="Element Exists - reversal date" Exists="[reversalDateField]" sap:VirtualizedContainerService.HintSize="1134,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+            <ui:UiElementExists DisplayName="Element Exists - reversal date" Exists="[reversalDateField]" sap:VirtualizedContainerService.HintSize="1176,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="18571f218232d6d2610ad1bbf759f65f" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Document Header*' /&gt;&lt;sap id='usr/ctxtBKPF-STODT' /&gt;" TimeoutMS="500">
                   <ui:Target.WaitForReady>
@@ -186,15 +186,15 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[reversalDateField]" DisplayName="If there is a reversal field" sap:VirtualizedContainerService.HintSize="1134,666" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[reversalDateField]" DisplayName="If there is a reversal field" sap:VirtualizedContainerService.HintSize="1176,889" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="755,519" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="797,742" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get reversal date" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="GetFullText_3">
+                  <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get reversal date" sap:VirtualizedContainerService.HintSize="755,106" sap2010:WorkflowViewState.IdRef="GetFullText_3">
                     <ui:GetFullText.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0776d539e62ee878660a78229cbddc12" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Document Header: 1201 Company Code' /&gt;&lt;sap id='usr/ctxtBKPF-STODT' /&gt;">
                         <ui:Target.TimeoutMS>
@@ -206,31 +206,34 @@
                       </ui:Target>
                     </ui:GetFullText.Target>
                     <ui:GetFullText.Text>
-                      <OutArgument x:TypeArguments="ui:GenericValue">[reversalDate]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[reversalDate]</OutArgument>
                     </ui:GetFullText.Text>
                   </ui:GetFullText>
-                  <If Condition="[IsNothing(reversalDate)]" DisplayName="If reversal date is populated" sap:VirtualizedContainerService.HintSize="713,281" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[IsNothing(reversalDate)]" DisplayName="If reversal date is populated" sap:VirtualizedContainerService.HintSize="755,504" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Reversal date is already empty&quot;]" />
                     </If.Then>
                     <If.Else>
-                      <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Clear date" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True">
-                        <ui:TypeInto.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0776d539e62ee878660a78229cbddc12" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Document Header*' /&gt;&lt;sap id='usr/ctxtBKPF-STODT' /&gt;">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                            <ui:Target.WaitForReady>
-                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                            </ui:Target.WaitForReady>
-                          </ui:Target>
-                        </ui:TypeInto.Target>
-                        <ui:TypeInto.Text>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </ui:TypeInto.Text>
-                      </ui:TypeInto>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,357" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Reversal date found - removing it now&quot;]" />
+                        <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Clear date" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text=" ">
+                          <ui:TypeInto.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0776d539e62ee878660a78229cbddc12" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Document Header*' /&gt;&lt;sap id='usr/ctxtBKPF-STODT' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:TypeInto.Target>
+                        </ui:TypeInto>
+                      </Sequence>
                     </If.Else>
                   </If>
                 </Sequence>
@@ -239,7 +242,7 @@
                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;No reversal date field found&quot;]" />
               </If.Else>
             </If>
-            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click check" sap:VirtualizedContainerService.HintSize="1134,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click check" sap:VirtualizedContainerService.HintSize="1176,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -261,7 +264,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <ui:UiElementExists DisplayName="Element Exists reversal popup" Exists="[reversalPopup]" sap:VirtualizedContainerService.HintSize="1134,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+            <ui:UiElementExists DisplayName="Element Exists reversal popup" Exists="[reversalPopup]" sap:VirtualizedContainerService.HintSize="1176,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="332f46731e87623ad4061ad6a79e2d3e" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Warning' /&gt;&lt;sap id='usr/txtMESSTXT1' /&gt;" TimeoutMS="500">
                   <ui:Target.WaitForReady>
@@ -270,7 +273,7 @@
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[reversalPopup]" sap:VirtualizedContainerService.HintSize="1134,253" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[reversalPopup]" sap:VirtualizedContainerService.HintSize="1176,253" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click check" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                   <ui:Click.CursorPosition>
@@ -296,7 +299,7 @@
                 </ui:Click>
               </If.Then>
             </If>
-            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Save" sap:VirtualizedContainerService.HintSize="1134,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Save" sap:VirtualizedContainerService.HintSize="1176,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -318,12 +321,10 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <as:Enter_Transaction_Code DisplayName="Enter Transaction Code" sap:VirtualizedContainerService.HintSize="1134,22" sap2010:WorkflowViewState.IdRef="Enter_Transaction_Code_1" in_tCode="/n" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1134,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Posting date: &quot; + out_postingDate + vbCr + &quot;Posting period: &quot; + out_postingPeriod]" />
           </Sequence>
         </ActivityAction>
       </ui:WindowScope.Body>
     </ui:WindowScope>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1210,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Reversal date removed&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1252,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Reversal date removed&quot;]" />
   </Sequence>
 </Activity>

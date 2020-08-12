@@ -53,10 +53,9 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Check the status of approval PDF attachment upload&#xA;Pre-condition: Doc Overview screen&#xA;Post-condition: Doc Overview screen&#xA;Arguments:&#xD;&#xA;    out_PostSuccess" DisplayName="SAP_AttachmentStatusPost" sap:VirtualizedContainerService.HintSize="915,1124" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Check the status of approval PDF attachment upload&#xA;Pre-condition: Doc Overview screen&#xA;Post-condition: Doc Overview screen&#xA;Arguments:&#xA;    out_PostSuccess" DisplayName="SAP_AttachmentStatusPost" sap:VirtualizedContainerService.HintSize="915,1124" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:GenericValue" Name="statusBarText" />
     </Sequence.Variables>

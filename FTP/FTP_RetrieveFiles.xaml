@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>496,803</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>496,808</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FTP_RetrieveFiles_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -58,10 +58,9 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Descreption: Retrieve JE file and supplementary files from FTP server&#xA;Pre-Condition: n/a&#xA;Post-Condition: n/a&#xA;Arguements: &#xA;    out_FileList" DisplayName="FTP_RetrieveFiles" sap:VirtualizedContainerService.HintSize="476,703" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Descreption: Retrieve PDF Approval&#xA;Pre-Condition: n/a&#xA;Post-Condition: n/a&#xA;Arguements: &#xA;    in_Host&#xD;&#xA;    in_FTPCredential&#xD;&#xA;    in_FTPPathPDF&#xD;&#xA;    in_LocalPDFPath  " DisplayName="FTP_RetrieveFiles" sap:VirtualizedContainerService.HintSize="476,748" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="FTPpassword" />
       <Variable x:TypeArguments="x:String" Name="FTPusername" />
